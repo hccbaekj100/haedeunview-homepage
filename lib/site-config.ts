@@ -1,0 +1,58 @@
+export const siteConfig = {
+  name: '여수 해든뷰 펜션',
+  phone: '010-3805-1937',
+  phoneHref: 'tel:01038051937',
+  address: '전라남도 여수시 외밭넘2길 10',
+  KAKAO_URL: '',
+  NAVER_BOOKING_URL: '',
+  REALTIME_BOOKING_URL: '',
+  images: {
+    sunset: '/photos/sunset.jpg',
+    expo: '/photos/expo-day.jpg',
+    night: '/photos/bridge-night.jpg',
+    expoNight: '/photos/expo-night.jpg',
+    cablecar: '/photos/cablecar.jpg',
+    oceanEditorial: '/photos/ocean-editorial.png',
+    coupleEditorial: '/photos/couple-editorial.png',
+    sunsetEditorial: '/photos/sunset-editorial.png',
+  },
+};
+export const rooms = [
+  { id: '201', structure: '온돌룸 + 거실 분리형', size: 30, base: 4, max: 5 },
+  { id: '301', structure: '온돌룸 + 거실 분리형', size: 30, base: 2, max: 3 },
+  { id: '302', structure: '킹 침대 1개', size: 15, base: 2, max: 2 },
+  { id: '303', structure: '킹 침대 1개', size: 15, base: 2, max: 2 },
+  {
+    id: '304',
+    structure: '퀸 침대룸 + 거실 분리형',
+    size: 19,
+    base: 4,
+    max: 5,
+  },
+  { id: '401', structure: '킹 침대 1개', size: 15, base: 2, max: 2 },
+  { id: '402', structure: '킹 침대 1개', size: 15, base: 2, max: 2 },
+  {
+    id: '403',
+    structure: '복층 온돌룸 + 킹 침대 + 거실 분리형',
+    size: 24,
+    base: 2,
+    max: 4,
+  },
+  {
+    id: '404',
+    structure: '복층 온돌룸 + 킹 침대룸 + 거실 분리형',
+    size: 24,
+    base: 4,
+    max: 5,
+  },
+].map((r) => ({ ...r, photos: [] as { src: string; alt: string }[] }));
+export const nav = [
+  ['ABOUT', '해든뷰 소개', '/about'],
+  ['ROOMS', '객실 안내', '/rooms'],
+  ['GUIDE', '이용 안내', '/guide'],
+  ['TRAVEL', '주변 여행', '/travel'],
+  ['REVIEWS', '고객 후기', '/reviews'],
+  ['BLOG', '여행 블로그', '/blog'],
+  ['LOCATION', '오시는 길', '/location'],
+  ['RESERVATION', '예약 문의', '/reservation'],
+];
