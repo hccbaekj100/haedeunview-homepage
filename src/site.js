@@ -1,0 +1,4 @@
+const menu=document.querySelector('.menu-toggle');const nav=document.querySelector('#navigation');
+menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기');nav.classList.toggle('open',open);});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','메뉴 열기');menu.focus();}});
+document.querySelectorAll('[data-floor]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-floor]').forEach(b=>{b.classList.toggle('selected',b===btn);b.setAttribute('aria-pressed',String(b===btn));});document.querySelectorAll('[data-room-floor]').forEach(card=>{card.hidden=btn.dataset.floor!=='all'&&card.dataset.roomFloor!==btn.dataset.floor;});}));
