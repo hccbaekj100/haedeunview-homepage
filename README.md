@@ -1,5 +1,26 @@
 # 여수 해든뷰 펜션 홈페이지
 
+## Home 예약 랜딩페이지 개선
+기존 20개 페이지를 유지하면서 Home에 장점 4개, 201호 우선 추천, 전체 객실 비교, 하루의 흐름, 준비 중 후기 3칸, 실제 관광지 사진 4개, 블로그 3개, 위치·주차, 최종 예약 영역을 적용했습니다. 공통 헤더는 고정형이며 예약 선택창과 모바일 하단 전화·객실 보기·예약하기가 모든 페이지에서 제공됩니다.
+
+- `scripts/home.mjs`: Home 전용 템플릿. `scripts/build.mjs`: 기존 공통 헤더·푸터·20개 경로 유지.
+- `src/landing.css`: 반응형 확장. `src/site.js`: 메뉴·층별 필터 유지, 예약 대화상자 및 절제된 등장 효과 추가.
+- `data/landing.mjs`: 실제 대표 사진, 주차, 실제 후기, 관광지 사진·출처·거리·이동 정보, 공유 이미지 설정.
+- `landing.heroPhoto`와 `dayMoments[].actualPhoto`에 실제 해든뷰 사진을 입력하세요. 현재는 기존 출처가 확인된 분위기용 사진임을 표시합니다.
+- 추천 객실은 201호를 우선 표시하고 `data/site.mjs`에서 실제 사진이 등록된 나머지 객실을 자동 추가합니다. 인원·시설·요금은 기존 객실 데이터를 공유합니다.
+- 후기와 거리·시간 수치는 확인 전 임의로 넣지 않았습니다. 외부 숙소 예약 주소는 기존 `site.booking`에서 관리합니다.
+- 공유 이미지에는 기존 노을 대표 사진을 연결했습니다. 실제 숙소 사진 제공 후 `landing.shareImage`를 교체할 수 있습니다.
+
+### 관광지 사진 출처
+원본은 `assets-source/`, 최적화 파일은 `dist/assets/`에 보관합니다. 아래 라이선스가 해당 사진의 축소·회전본에도 적용됩니다. 사진 크기는 축소했고 화면 비율에 따라 크롭됩니다. 케이블카 사진은 방향을 바로잡았습니다. 촬영 당시 모습으로 현재 운영 상황을 보장하지 않습니다.
+
+| 사진 | 저작자·촬영연도 | 출처 | 라이선스 |
+|---|---|---|---|
+| 오동도 | Mikhail Kim · 2009 | https://commons.wikimedia.org/wiki/File:Odongdo_2.jpg | https://creativecommons.org/licenses/by-sa/2.0/ |
+| 여수 엑스포 빅오쇼 | Jeongyeol Park · 2012 | https://commons.wikimedia.org/wiki/File:The_Big-O_Show_(Yeosu_EXPO)_-_panoramio.jpg | https://creativecommons.org/licenses/by/3.0/ |
+| 케이블카 전망 | Toobigtokale · 2022 | https://commons.wikimedia.org/wiki/File:Yeosu_Maritime_Cable_Car_View.jpg | https://creativecommons.org/licenses/by-sa/4.0/ |
+| 여수 밤바다 | thomas park · 2010 | https://commons.wikimedia.org/wiki/File:Yeosu_by_night_2.jpg | https://creativecommons.org/licenses/by/2.0/ |
+
 현재 폴더 최초 확인 시 .git 이외의 기존 홈페이지·목업·사진 파일이 없었습니다. 기존 파일 삭제 없이 정적 다페이지 홈페이지 20개를 제작했습니다.
 
 ## 수정 위치
