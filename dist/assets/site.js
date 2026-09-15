@@ -11,3 +11,7 @@ bookingDialog?.addEventListener('click',e=>{if(e.target===bookingDialog){const r
 bookingDialog?.addEventListener('close',()=>{document.body.classList.remove('dialog-open');bookingTrigger?.focus();});
 const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
 if('IntersectionObserver' in window&&!reducedMotion.matches){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('appeared');observer.unobserve(entry.target);}}),{threshold:.05});document.querySelectorAll('.landing .section').forEach(section=>observer.observe(section));}
+// Hide the fixed mobile bar when footer content is in view.
+const mobileBar=document.querySelector('.mobile-booking');
+const footer=document.querySelector('footer');
+if(mobileBar&&footer&&'IntersectionObserver' in window){new IntersectionObserver(entries=>{mobileBar.hidden=entries[0].isIntersecting;},{threshold:0}).observe(footer);}

@@ -9,5 +9,8 @@ for(const id of ordered){const position=home.indexOf('id="'+id+'"');assert(posit
 for(const href of home.matchAll(/href="#([^"]+)"/g))assert(home.includes('id="'+href[1]+'"'),'Broken anchor');
 for(const id of ['201','301','302','303','304','401','402','403','404'])assert(home.includes('/rooms/'+id+'/'));
 assert(home.includes('property="og:image"'));assert(home.includes('id="booking-dialog"'));assert(home.includes('class="mobile-booking"'));
-assert.equal((home.match(/<h3>고객 후기 준비 중<\/h3>/g)||[]).length,3);
+assert.equal((home.match(/<h3>소중한 후기를 준비하고 있습니다<\/h3>/g)||[]).length,3);
+assert.equal((home.match(/class="recommended-room"/g)||[]).length,3);
+assert(!home.includes('<table>'));
+assert(fs.readFileSync('dist/rooms/index.html','utf8').includes('<table>'));
 console.log('Home section order, nine room links, anchors, share image, booking dialog and honest review placeholders: PASS');

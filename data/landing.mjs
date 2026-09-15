@@ -2,9 +2,9 @@
 export const landing={heroPhoto:null,heroAlt:null,parking:null,shareImage:'/assets/sunset.jpg'};
 export const benefits=[
 {icon:'≈',title:'객실에서 만나는 여수 바다',text:'여수 바다와 오동도를 바라보는 쉼. 객실별 전망은 예약 전에 확인해주세요.'},
-{icon:'☼',title:'여행의 피로를 덜어주는 공간',text:'연인, 가족, 친구와 함께 여행의 속도를 잠시 늦춰보세요.'},
-{icon:'✧',title:'청결을 소중하게 생각합니다',text:'편안한 머무름의 시작은 깨끗한 객실. 구체적인 청결 관리 절차는 확인 후 안내합니다.'},
-{icon:'⌖',title:'여수 여행을 이어가는 위치',text:'오동도부터 여수 밤바다까지 여행을 계획해보세요. 정확한 이동 거리와 시간은 확인 중입니다.'}
+{icon:'⌖',title:'오동도를 바라보는 전망',text:'여수 바다와 섬을 가까이 두는 시간. 객실별 전망은 문의해주세요.'},
+{icon:'✧',title:'안심하고 머무는 청결한 공간',text:'깨끗한 객실을 소중하게 생각합니다.'},
+{icon:'☼',title:'편안하게 쉬어가는 감성 숙소',text:'연인, 가족, 친구와 함께 느긋한 하루를 보내세요.'}
 ];
 export const dayMoments=[
 {time:'AFTERNOON',label:'오후',title:'바다를 바라보며, 쉼의 시작',text:'짐을 내려놓고 잠시 숨을 고르는 시간. 입실 가능 시간은 예약 시 확인해주세요.',photo:'sea',actualPhoto:null},
