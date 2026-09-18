@@ -1,5 +1,5 @@
 // 실제 숙소 사진이 전달되면 경로와 촬영 설명을 입력하세요.
-export const landing={heroPhoto:null,heroAlt:null,parking:null,shareImage:'/assets/sunset.jpg'};
+export const landing={heroPhoto:'/assets/room-302.png',heroAlt:'해든뷰 302호 객실과 창밖 바다 전망',parking:null,shareImage:'/assets/room-302.png'};
 export const benefits=[
 {icon:'≈',title:'객실에서 만나는 여수 바다',text:'여수 바다와 오동도를 바라보는 쉼. 객실별 전망은 예약 전에 확인해주세요.'},
 {icon:'⌖',title:'오동도를 바라보는 전망',text:'여수 바다와 섬을 가까이 두는 시간. 객실별 전망은 문의해주세요.'},
