@@ -1,6 +1,6 @@
 import {roomDetails} from './room-details.mjs';
 export const pending='정보 확인 후 업데이트 예정';
-export const site={name:'여수 해든뷰 펜션',tagline:'노을이 머무는 곳, 여수 해든뷰',subtitle:'바다를 바라보며 여행의 속도를 잠시 늦춰보세요.',address:'전라남도 여수시 외밭넘2길 10',phone:'010-3805-1937',tel:'tel:01038051937',booking:{official:'http://haedeunview.com/include/reservation.php?biz_code=P202203007&tab=1',yanolja:null,yeogi:null},map:'https://map.naver.com/p/search/'+encodeURIComponent('전라남도 여수시 외밭넘2길 10')};
+export const site={name:'여수 해든뷰 펜션',tagline:'노을이 머무는 곳, 여수 해든뷰',subtitle:'바다를 바라보며 여행의 속도를 잠시 늦춰보세요.',address:'전라남도 여수시 외밭넘2길 10',phone:'010-3805-1937',tel:'tel:01038051937',booking:{official:'https://rev.yapen.co.kr/external?ypIdx=62869',yanolja:null,yeogi:null},map:'https://map.naver.com/p/search/'+encodeURIComponent('전라남도 여수시 외밭넘2길 10')};
 export const photos={sunset:'/assets/sunset.jpg',sea:'/assets/sea.jpg'};
 const roomPhotos={201:'png',301:'png',302:'png',303:'png',304:'png',401:'png',402:'jpg',403:'jpg',404:'jpg'};
 export const rooms=['201','301','302','303','304','401','402','403','404'].map(id=>({id,name:id+'호',floor:id[0]+'층',photo:roomPhotos[id]?`/assets/room-${id}.${roomPhotos[id]}`:null,gallery:[],...roomDetails[id]}));
