@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yeosu-haedeunview-stay-0915.hccbaekj100896936.chatgpt.site/sitemap.xml
